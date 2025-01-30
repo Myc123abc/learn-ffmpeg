@@ -3,7 +3,7 @@ extern "C"
 #include <libavutil/log.h>
 }
 
-int main()
+void testLog()
 {
     av_log_set_level(AV_LOG_DEBUG);
 
