@@ -102,7 +102,7 @@ static void decode(AVCodecContext* decCtx, AVPacket* pkt, AVFrame* frame, std::v
     }
 }
 
-int main()
+void testDecode()
 {
     av_log_set_level(AV_LOG_DEBUG);
 
@@ -162,7 +162,7 @@ int main()
     uint8_t* data = buffer;
 
     // decode
-    auto readSize = fread(buffer, 1, BufferSize, file);
+    auto readSize = fread(buffer, 1, 100, file);
     while (readSize > 0)
     {
         // parse data to packet
