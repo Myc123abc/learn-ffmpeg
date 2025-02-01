@@ -16,14 +16,14 @@ void testFile()
     ret = avio_open(&ctx, path, AVIO_FLAG_READ);
     if (ret < 0)
     {
-        av_log(nullptr, AV_LOG_ERROR, "Can't open %s: %s\n", path, av_err2str(ret));
+//        av_log(nullptr, AV_LOG_ERROR, "Can't open %s: %s\n", path, av_err2str(ret));
         exit(EXIT_FAILURE);
     }
 
     ret = avio_close(ctx);
     if (ret < 0)
     {
-        av_log(nullptr, AV_LOG_ERROR, "Can't close %s: %s\n", path, av_err2str(ret));
+//        av_log(nullptr, AV_LOG_ERROR, "Can't close %s: %s\n", path, av_err2str(ret));
         exit(EXIT_FAILURE);
     }
 
@@ -33,7 +33,7 @@ void testFile()
     {
         if (!std::filesystem::is_directory(dir))
         {
-            av_log(nullptr, AV_LOG_ERROR, "%s is not a directory: %s\n", dir, av_err2str(ret));
+//            av_log(nullptr, AV_LOG_ERROR, "%s is not a directory: %s\n", dir, av_err2str(ret));
             exit(EXIT_FAILURE);
         } 
     }
@@ -42,7 +42,7 @@ void testFile()
     ret = avio_open_dir(&dirCtx, "./", nullptr);
     if (ret < 0)
     {
-        av_log(nullptr, AV_LOG_ERROR, "Can't open %s: %s\n", dir, av_err2str(ret));
+//        av_log(nullptr, AV_LOG_ERROR, "Can't open %s: %s\n", dir, av_err2str(ret));
         exit(EXIT_FAILURE);
     }
 }
